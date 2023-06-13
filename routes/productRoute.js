@@ -26,8 +26,8 @@ router.get("/", (req, res) => {
   // delete product
   router.route('/delete-product/:id').delete(isAuthenticatedUser,authorizeRole("admin"),
   deleteProduct)
-  
-// review oroduct
+
+// review prooduct
   router.route("/review").put(isAuthenticatedUser, createProductReview);
 
 module.exports=router;
